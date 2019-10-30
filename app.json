@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Metodista App",
-    "slug": "meto.app",
+    "slug": "metoapp",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
