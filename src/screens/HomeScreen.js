@@ -12,6 +12,8 @@ import {
 
 import { MonoText } from '../components/StyledText';
 
+import { Button, ThemeProvider } from 'react-native-elements';
+
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -51,6 +53,10 @@ export default function HomeScreen() {
             </Text>
           </TouchableOpacity>
         </View>
+
+        <ThemeProvider>
+      <Button title="Hey!" />
+    </ThemeProvider>
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
