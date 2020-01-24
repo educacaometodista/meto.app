@@ -1,9 +1,14 @@
 import styled from 'styled-components';
-// import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 
-export const Container = styled.View`
+import bg from '../../assets/img/bg.jpg';
+
+export const Container = styled.ImageBackground.attrs({
+  source: bg,
+})`
   flex: 1;
-  background-color: blue;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 `;
@@ -28,6 +33,17 @@ export const AlunoText = styled.Text`
   color: #333;
 `;
 
-export const CandidatoButton = styled.TouchableOpacity``;
+export const CandidatoButton = styled.TouchableOpacity`
+  width: 80%;
+  max-width: 300px;
+  background: #00000069;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+`;
 
-export const CandidatoText = styled.Text``;
+export const CandidatoText = styled.Text`
+  color: #fff;
+`;
