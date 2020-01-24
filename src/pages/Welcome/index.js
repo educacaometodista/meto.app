@@ -16,7 +16,7 @@ import {
 } from './styles';
 import { Bold } from '../../styles/global';
 
-function Welcome() {
+function Welcome({ navigation }) {
   return (
     <>
       <Container>
@@ -32,7 +32,7 @@ function Welcome() {
           <AlunoButton>
             <AlunoText>Sou Aluno</AlunoText>
           </AlunoButton>
-          <CandidatoButton>
+          <CandidatoButton onPress={() => navigation.navigate('Candidato')}>
             <CandidatoText>Sou Candidato</CandidatoText>
           </CandidatoButton>
           <HelpButton>
