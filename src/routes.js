@@ -5,6 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Welcome from './pages/Welcome';
+import Candidato from './pages/Candidato';
 
 const Routes = createAppContainer(
   createStackNavigator(
@@ -13,7 +14,13 @@ const Routes = createAppContainer(
         screen: Welcome,
         navigationOptions: {
           title: 'Seja bem-vindo!',
-          headerShown: false, // True = Header visível na primeira página
+          headerShown: false,
+        },
+      },
+      Candidato: {
+        screen: Candidato,
+        navigationOptions: {
+          title: 'Página do Candidato',
         },
       },
     },
