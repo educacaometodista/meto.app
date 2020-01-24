@@ -1,10 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
 
-export default function App() {
+import Routes from './src/routes';
+
+function App() {
   return (
-    <View>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <>
+      <StatusBar barStyle="light-content" />
+      <Routes />
+    </>
   );
 }
+
+export default App;
