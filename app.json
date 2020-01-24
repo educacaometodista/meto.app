@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Universidade Metodista de São Paulo",
-    "slug": "meto.app-2",
+    "slug": "meto.app",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
