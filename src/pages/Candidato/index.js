@@ -1,13 +1,30 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
 
-// import { Container } from './styles';
+import {
+  Container,
+  Background,
+  DocumentContainer,
+  DocumentTitle,
+  DocumentInput,
+  SubscribeContainer,
+  SubscribeButton,
+  SubscribeText,
+} from './styles';
 
-function Candidato() {
+function Candidato({ navigation }) {
   return (
-    <SafeAreaView>
-      <Text>Olá Candidato!</Text>
-    </SafeAreaView>
+    <Container>
+      <Background />
+      <DocumentContainer>
+        <DocumentTitle>Verifique a sua situação</DocumentTitle>
+        <DocumentInput />
+        <SubscribeContainer>
+          <SubscribeButton>
+            <SubscribeText>Inscreva-se no vestibular</SubscribeText>
+          </SubscribeButton>
+        </SubscribeContainer>
+      </DocumentContainer>
+    </Container>
   );
 }
 
