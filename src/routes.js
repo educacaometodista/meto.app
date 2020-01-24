@@ -13,7 +13,7 @@ const Routes = createAppContainer(
         screen: Welcome,
         navigationOptions: {
           title: 'Seja bem-vindo!',
-          headerShown: true, // Desabilitar para ocultar na home
+          headerShown: false, // True = Header visível na primeira página
         },
       },
     },
