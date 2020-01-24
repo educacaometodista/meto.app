@@ -71,11 +71,19 @@ export const CandidatoButton = styled.TouchableOpacity`
   height: 40px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 20px;
 `;
 
 export const CandidatoText = styled.Text`
   color: #fff;
   font-weight: bold;
+`;
+
+export const HelpButton = styled.TouchableOpacity``;
+
+export const HelpText = styled.Text`
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 10px;
 `;

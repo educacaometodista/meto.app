@@ -11,6 +11,8 @@ import {
   AlunoText,
   CandidatoButton,
   CandidatoText,
+  HelpButton,
+  HelpText,
 } from './styles';
 import { Bold } from '../../styles/global';
 
@@ -33,6 +35,11 @@ function Welcome() {
           <CandidatoButton>
             <CandidatoText>Sou Candidato</CandidatoText>
           </CandidatoButton>
+          <HelpButton>
+            <HelpText>
+              Precisa de ajuda? <Bold>Entre em contato.</Bold>
+            </HelpText>
+          </HelpButton>
         </ButtonGroup>
       </Container>
     </>
