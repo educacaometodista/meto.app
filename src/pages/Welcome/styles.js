@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import { darken, lighten } from 'polished';
 
 import logo from '../../assets/img/logo.png';
 import bg from '../../assets/img/background.png';
 
 export const Container = styled.View`
-  flex: 1;
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -18,7 +16,6 @@ export const Background = styled.Image.attrs({
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: -5;
 `;
 
 export const HeaderWelcome = styled.View`
@@ -28,9 +25,12 @@ export const HeaderWelcome = styled.View`
 `;
 
 export const HeaderLogo = styled.Image.attrs({
-  // source: logo,
+  source: logo,
+  resizeMode: 'center',
 })`
-  /* width: 200px; */
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 20px;
 `;
 
 export const WelcomeTitle = styled.Text`
