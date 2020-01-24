@@ -1,10 +1,28 @@
 import React from 'react';
-import { View } from 'react-native';
-
-// import { Container } from './styles';
+import {
+  Container,
+  WelcomeTitle,
+  AlunoButton,
+  AlunoText,
+  CandidatoButton,
+  CandidatoText,
+} from './styles';
 
 function Welcome() {
-  return <View />;
+  return (
+    <>
+      <Container>
+        <WelcomeTitle>Metodista</WelcomeTitle>
+
+        <AlunoButton>
+          <AlunoText>Sou Aluno</AlunoText>
+        </AlunoButton>
+        <CandidatoButton>
+          <CandidatoText>Sou Candidato</CandidatoText>
+        </CandidatoButton>
+      </Container>
+    </>
+  );
 }
 
 export default Welcome;
