@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
-import bg from '../../assets/img/bg.jpg';
+import logo from '../../assets/img/logo.png';
+import bg from '../../assets/img/background.png';
 
 export const Container = styled.View`
   flex: 1;
@@ -18,7 +19,6 @@ export const Background = styled.Image.attrs({
   height: 100%;
   width: 100%;
   z-index: -5;
-  transform: rotate(180deg);
 `;
 
 export const HeaderWelcome = styled.View`
@@ -27,7 +27,11 @@ export const HeaderWelcome = styled.View`
   align-items: center;
 `;
 
-export const HeaderLogo = styled.Image.attrs({})``;
+export const HeaderLogo = styled.Image.attrs({
+  // source: logo,
+})`
+  /* width: 200px; */
+`;
 
 export const WelcomeTitle = styled.Text`
   font-size: 28px;
@@ -41,7 +45,8 @@ export const WelcomeSubtitle = styled.Text`
 `;
 
 export const ButtonGroup = styled.View`
-  flex: 1;
+  margin: 0 auto;
+  margin-bottom: 30px;
   min-height: 140px;
   width: 100%;
   justify-content: center;
