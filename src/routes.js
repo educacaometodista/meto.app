@@ -6,6 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import Welcome from './pages/Welcome';
 import Candidato from './pages/Candidato';
+import Login from './pages/Aluno/Login';
 
 const Routes = createAppContainer(
   createStackNavigator(
@@ -21,6 +22,12 @@ const Routes = createAppContainer(
         screen: Candidato,
         navigationOptions: {
           title: 'Página do Candidato',
+        },
+      },
+      Login: {
+        screen: Login,
+        navigationOptions: {
+          title: 'Faça o Login',
         },
       },
     },
