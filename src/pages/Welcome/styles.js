@@ -85,10 +85,6 @@ export const CandidatoText = styled.Text`
   font-weight: bold;
 `;
 
-export const HelpButton = styled.TouchableOpacity``;
+export const OrText = styled.Text``;
 
-export const HelpText = styled.Text`
-  color: #fff;
-  font-size: 12px;
-  margin-bottom: 10px;
-`;
+export const Divisor = styled.View``;
