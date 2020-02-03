@@ -85,6 +85,21 @@ export const CandidatoText = styled.Text`
   font-weight: bold;
 `;
 
-export const OrText = styled.Text``;
+export const OrField = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+`;
 
-export const Divisor = styled.View``;
+export const OrText = styled.Text`
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+`;
+
+export const Divisor = styled.View`
+  height: 2px;
+  width: 33%;
+  background: #fff;
+`;
