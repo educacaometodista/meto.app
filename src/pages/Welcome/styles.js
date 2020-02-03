@@ -66,6 +66,7 @@ export const AlunoButton = styled.TouchableOpacity`
 
 export const AlunoText = styled.Text`
   color: #333;
+  text-transform: uppercase;
   font-weight: bold;
 `;
 
@@ -82,6 +83,7 @@ export const CandidatoButton = styled.TouchableOpacity`
 
 export const CandidatoText = styled.Text`
   color: #fff;
+  text-transform: uppercase;
   font-weight: bold;
 `;
 
