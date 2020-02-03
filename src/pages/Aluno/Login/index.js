@@ -1,13 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { StatusBar, View, Text } from 'react-native';
 
 // import { Container } from './styles';
 
 function Login() {
   return (
-    <View>
-      <Text>Hello Student!</Text>
-    </View>
+    <>
+      <StatusBar barStyle="light-content" />
+      <View>
+        <Text>Hello Student!</Text>
+      </View>
+    </>
   );
 }
 
