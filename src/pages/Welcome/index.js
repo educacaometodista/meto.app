@@ -42,7 +42,7 @@ function Welcome({ navigation }) {
             <OrText>Ou</OrText>
             <Divisor style={{ marginLeft: 10 }} />
           </OrField>
-          <CandidatoButton onPress={() => {}}>
+          <CandidatoButton onPress={() => navigation.navigate('Subscribe')}>
             <CandidatoText>Quero me Inscrever</CandidatoText>
           </CandidatoButton>
         </ButtonGroup>
@@ -50,6 +50,10 @@ function Welcome({ navigation }) {
     </>
   );
 }
+
+// Welcome.navigationOptions = {
+
+// }
 
 Welcome.propTypes = {
   navigation: PropTypes.shape({
