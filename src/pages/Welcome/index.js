@@ -11,8 +11,8 @@ import {
   AlunoText,
   CandidatoButton,
   CandidatoText,
-  HelpButton,
-  HelpText,
+  OrText,
+  Divisor,
 } from './styles';
 import { Bold } from '../../styles/global';
 
@@ -35,11 +35,9 @@ function Welcome({ navigation }) {
           <CandidatoButton onPress={() => navigation.navigate('Candidato')}>
             <CandidatoText>Sou Candidato</CandidatoText>
           </CandidatoButton>
-          <HelpButton>
-            <HelpText>
-              Precisa de ajuda? <Bold>Entre em contato.</Bold>
-            </HelpText>
-          </HelpButton>
+          <Divisor />
+          <OrText>Ou</OrText>
+          <Divisor />
         </ButtonGroup>
       </Container>
     </>
