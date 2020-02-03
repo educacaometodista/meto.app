@@ -31,7 +31,7 @@ function Welcome({ navigation }) {
           <WelcomeSubtitle>Lorem ipsum dolor sit amet.</WelcomeSubtitle>
         </HeaderWelcome>
         <ButtonGroup>
-          <AlunoButton onPress={() => {}}>
+          <AlunoButton onPress={() => navigation.navigate('Login')}>
             <AlunoText>Sou Aluno</AlunoText>
           </AlunoButton>
           <CandidatoButton onPress={() => navigation.navigate('Candidato')}>
