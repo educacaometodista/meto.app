@@ -11,6 +11,7 @@ import {
   AlunoText,
   CandidatoButton,
   CandidatoText,
+  OrField,
   OrText,
   Divisor,
 } from './styles';
@@ -29,15 +30,20 @@ function Welcome({ navigation }) {
           <WelcomeSubtitle>Lorem ipsum dolor sit amet.</WelcomeSubtitle>
         </HeaderWelcome>
         <ButtonGroup>
-          <AlunoButton>
+          <AlunoButton onPress={() => {}}>
             <AlunoText>Sou Aluno</AlunoText>
           </AlunoButton>
           <CandidatoButton onPress={() => navigation.navigate('Candidato')}>
             <CandidatoText>Sou Candidato</CandidatoText>
           </CandidatoButton>
-          <Divisor />
-          <OrText>Ou</OrText>
-          <Divisor />
+          <OrField>
+            <Divisor style={{ marginRight: 10 }} />
+            <OrText>Ou</OrText>
+            <Divisor style={{ marginLeft: 10 }} />
+          </OrField>
+          <CandidatoButton onPress={() => {}}>
+            <CandidatoText>Quero me Inscrever</CandidatoText>
+          </CandidatoButton>
         </ButtonGroup>
       </Container>
     </>
