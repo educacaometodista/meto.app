@@ -7,6 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Welcome from './pages/Welcome';
 import Candidato from './pages/Candidato';
 import Login from './pages/Aluno/Login';
+import Subscribe from './pages/Subscribe';
 
 const Routes = createAppContainer(
   createStackNavigator(
@@ -28,6 +29,12 @@ const Routes = createAppContainer(
         screen: Login,
         navigationOptions: {
           title: 'Faça o Login',
+        },
+      },
+      Subscribe: {
+        screen: Subscribe,
+        navigationOptions: {
+          title: 'Inscreva-se no Vestibular',
         },
       },
     },
