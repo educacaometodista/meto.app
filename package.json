@@ -11,6 +11,7 @@
     "@react-native-community/masked-view": "0.1.5",
     "expo": "~36.0.0",
     "expo-linear-gradient": "~8.0.0",
+    "galio-framework": "^0.6.3",
     "polished": "^3.4.2",
     "prop-types": "^15.7.2",
     "react": "~16.9.0",
