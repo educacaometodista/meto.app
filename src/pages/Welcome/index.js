@@ -50,7 +50,11 @@ function Welcome({ navigation }) {
           </OrField>
           <Button
             color="#00000069"
-            onPress={() => navigation.navigate('Subscribe')}
+            onPress={() =>
+              navigation.navigate('Subscribe', {
+                url: 'https://vestibularmetodista.com.br',
+              })
+            }
           >
             <CandidatoText>Quero me Inscrever</CandidatoText>
           </Button>
