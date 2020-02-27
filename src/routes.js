@@ -8,6 +8,7 @@ import Welcome from './pages/Welcome';
 import Candidato from './pages/Candidato';
 import Login from './pages/Aluno/Login';
 import Subscribe from './pages/Subscribe';
+import Home from './pages/Home';
 
 const Routes = createAppContainer(
   createStackNavigator(
@@ -35,6 +36,12 @@ const Routes = createAppContainer(
         screen: Subscribe,
         navigationOptions: {
           title: 'Inscreva-se no Vestibular',
+        },
+      },
+      Home: {
+        screen: Home,
+        navigationOptions: {
+          title: 'Universidade Metodista de São Paulo',
         },
       },
     },
