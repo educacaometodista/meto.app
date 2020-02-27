@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'galio-framework';
 import {
   Container,
   Background,
@@ -8,7 +9,6 @@ import {
   WelcomeTitle,
   WelcomeSubtitle,
   ButtonGroup,
-  AlunoButton,
   AlunoText,
   CandidatoButton,
   CandidatoText,
@@ -31,29 +31,34 @@ function Welcome({ navigation }) {
           <WelcomeSubtitle>Lorem ipsum dolor sit amet.</WelcomeSubtitle>
         </HeaderWelcome>
         <ButtonGroup>
-          <AlunoButton onPress={() => navigation.navigate('Login')}>
+          <Button
+            color="#FFF"
+            onPress={() => navigation.navigate('Login')}
+            style={{
+              marginBottom: 15,
+            }}
+          >
             <AlunoText>Sou Aluno</AlunoText>
-          </AlunoButton>
-          <CandidatoButton onPress={() => navigation.navigate('Candidato')}>
-            <CandidatoText>Sou Candidato</CandidatoText>
-          </CandidatoButton>
+          </Button>
+          <Button color="#FFF" onPress={() => navigation.navigate('Candidato')}>
+            <AlunoText>Sou Candidato</AlunoText>
+          </Button>
           <OrField>
             <Divisor style={{ marginRight: 10 }} />
             <OrText>Ou</OrText>
             <Divisor style={{ marginLeft: 10 }} />
           </OrField>
-          <CandidatoButton onPress={() => navigation.navigate('Subscribe')}>
+          <Button
+            color="#00000069"
+            onPress={() => navigation.navigate('Subscribe')}
+          >
             <CandidatoText>Quero me Inscrever</CandidatoText>
-          </CandidatoButton>
+          </Button>
         </ButtonGroup>
       </Container>
     </>
   );
 }
-
-// Welcome.navigationOptions = {
-
-// }
 
 Welcome.propTypes = {
   navigation: PropTypes.shape({
