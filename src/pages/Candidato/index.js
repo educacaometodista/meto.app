@@ -1,13 +1,12 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Button, Input } from 'galio-framework';
 import {
   Container,
   Background,
-  Student,
   DocumentContainer,
   DocumentTitle,
-  DocumentInput,
   ContinueContainer,
   ContinueButton,
   ContinueText,
@@ -25,17 +24,22 @@ function Candidato({ navigation }) {
 
         <DocumentContainer>
           <DocumentTitle>Verifique a sua situação</DocumentTitle>
-          <DocumentInput />
+          <Input
+            rounded
+            placeholder="Digite o seu CPF"
+            placeholderTextColor="#105ab3"
+            style={{ borderColor: '#105ab3' }}
+          />
 
           <ContinueContainer>
-            <ContinueButton>
+            <Button round color="#105ab3">
               <ContinueText>Continuar</ContinueText>
-            </ContinueButton>
+            </Button>
           </ContinueContainer>
         </DocumentContainer>
 
         <SubscribeContainer>
-          <SubscribeButton>
+          <SubscribeButton onPress={() => navigation.navigate('Subscribe')}>
             <LinearGradient
               colors={['#073a78', '#105ab3', '#073a78']}
               style={{
