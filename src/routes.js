@@ -42,6 +42,7 @@ const Routes = createAppContainer(
         screen: Home,
         navigationOptions: {
           title: 'Universidade Metodista de São Paulo',
+          // headerShown: false,
         },
       },
     },
