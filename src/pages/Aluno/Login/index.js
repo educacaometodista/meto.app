@@ -13,16 +13,16 @@ function Login({ navigation }) {
         </View>
         <StatusBar barStyle="light-content" />
         <Input
-          placeholder="E-mail"
+          placeholder="Digite seu número de matrícula"
           right
-          icon="mail"
+          icon="user"
           family="antdesign"
           iconColor="#105ab3"
           style={{ borderColor: '#105ab3', color: '#105ab3' }}
           email
         />
         <Input
-          placeholder="password"
+          placeholder="Sua senha secreta"
           password
           viewPass
           style={{ borderColor: '#105ab3', color: '#105ab3' }}
@@ -34,7 +34,11 @@ function Login({ navigation }) {
             justifyContent: 'flex-start',
           }}
         >
-          <Checkbox color="#105ab3" label="Permanecer conectado" />
+          <Checkbox
+            color="#105ab3"
+            label="Permanecer conectado"
+            style={{ marginVertical: 10, flex: 1 }}
+          />
         </View>
 
         <Button
@@ -44,7 +48,14 @@ function Login({ navigation }) {
         >
           <Text style={{ color: '#FFF' }}>Entrar</Text>
         </Button>
-        <TouchableOpacity onPress={() => navigation.navigate('Subscribe')}>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('Subscribe', {
+              url: 'https://vestibularmetodista.com.br',
+            })
+          }
+          style={{ marginVertical: 10 }}
+        >
           <Text>Quero me inscrever</Text>
         </TouchableOpacity>
       </Container>
