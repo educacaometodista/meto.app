@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import {
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Dimensions,
-  Alert,
-} from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, Dimensions } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
-import api from '../../services/api';
-import { argonTheme } from '../../constants';
 
+import api from '../../services/api';
+
+import { argonTheme } from '../../constants';
+import { CardContainer } from './styles';
+import Card from '../../components/card';
 import Articles from '../../components/news';
 
-const { width } = Dimensions.get('screen');
-const cardWidth = width - theme.SIZES.BASE * 2;
-
-export default function Home() {
+export default function Home({ navigation }) {
   const [news, setNews] = useState([]);
+
+  const { width } = Dimensions.get('screen');
+  const cardWidth = width - theme.SIZES.BASE * 2;
   const regexImg = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g;
+
   useEffect(() => {
     async function loadNews() {
       const response = await api.get('/news');
@@ -30,6 +28,10 @@ export default function Home() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
+
+      <CardContainer>
+        <Card />
+      </CardContainer>
       <Block flex center>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Block flex style={styles.group}>
@@ -63,7 +65,11 @@ export default function Home() {
                           )
                         : 'http://placehold.it/400x400'
                     }
-                    articleUrl={article.guid}
+                    articleUrl={() =>
+                      navigation.navigate('Subscribe', {
+                        url: article.guid,
+                      })
+                    }
                     articleDescription={article.description}
                     articleDate={article.pubDate}
                   />
