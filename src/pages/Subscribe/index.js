@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, Alert } from 'react-native';
+import { StatusBar } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 function Subscribe({ navigation }) {
