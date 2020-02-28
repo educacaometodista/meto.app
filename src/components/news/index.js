@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Image,
   TouchableWithoutFeedback,
+  TouchableOpacity,
   StyleSheet,
   Dimensions,
 } from 'react-native';
@@ -21,14 +22,10 @@ function Articles({
   articleDate,
 }) {
   return (
-    <TouchableWithoutFeedback
+    <TouchableOpacity
       style={{ zIndex: 3 }}
       key={`product-${articleTitle}`}
-      onPress={() =>
-        navigation.navigate('Subscribe', {
-          url: articleUrl,
-        })
-      }
+      onPress={articleUrl}
     >
       <Block center style={styles.productItem}>
         <Image
@@ -58,7 +55,7 @@ function Articles({
           </Text>
         </Block>
       </Block>
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
   );
 }
 
@@ -106,7 +103,7 @@ const styles = StyleSheet.create({
   productImage: {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    width: 200,
+    width: 300,
     height: 200,
     borderRadius: 3,
   },
