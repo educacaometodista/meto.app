@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Image,
   TouchableWithoutFeedback,
-  TouchableOpacity,
+  TouchableHighlight,
   StyleSheet,
   Dimensions,
 } from 'react-native';
@@ -22,7 +22,7 @@ function Articles({
   articleDate,
 }) {
   return (
-    <TouchableOpacity
+    <TouchableHighlight
       style={{ zIndex: 3 }}
       key={`product-${articleTitle}`}
       onPress={articleUrl}
@@ -55,7 +55,7 @@ function Articles({
           </Text>
         </Block>
       </Block>
-    </TouchableOpacity>
+    </TouchableHighlight>
   );
 }
 
