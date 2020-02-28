@@ -35,7 +35,7 @@ const Routes = createAppContainer(
       Subscribe: {
         screen: Subscribe,
         navigationOptions: {
-          title: 'Inscreva-se no Vestibular',
+          title: 'Navegação',
         },
       },
       Home: {
