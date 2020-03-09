@@ -2,12 +2,26 @@ import React, { useEffect, useState } from 'react';
 import { ScrollView, StatusBar, StyleSheet, Dimensions } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
 
+import PropTypes from 'prop-types';
+
 import api from '../../services/api';
 
 import { argonTheme } from '../../constants';
 import { CardContainer } from './styles';
 import Card from '../../components/card';
 import Articles from '../../components/news';
+
+const styles = StyleSheet.create({
+  title: {
+    paddingBottom: theme.SIZES.BASE,
+    paddingHorizontal: theme.SIZES.BASE * 2,
+    marginTop: 22,
+    color: argonTheme.COLORS.HEADER,
+  },
+  group: {
+    paddingTop: theme.SIZES.BASE,
+  },
+});
 
 export default function Home({ navigation }) {
   const [news, setNews] = useState([]);
@@ -83,14 +97,16 @@ export default function Home({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  title: {
-    paddingBottom: theme.SIZES.BASE,
-    paddingHorizontal: theme.SIZES.BASE * 2,
-    marginTop: 22,
-    color: argonTheme.COLORS.HEADER,
+Home.propTypes = {
+  navigation: PropTypes.shape({
+    getParam: PropTypes.func,
+    navigate: PropTypes.func,
+  }),
+};
+
+Home.defaultProps = {
+  navigation: {
+    getParam: '',
+    navigate: 'Home',
   },
-  group: {
-    paddingTop: theme.SIZES.BASE,
-  },
-});
+};
