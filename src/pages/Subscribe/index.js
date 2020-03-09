@@ -2,6 +2,8 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { WebView } from 'react-native-webview';
 
+import PropTypes from 'prop-types';
+
 function Subscribe({ navigation }) {
   const url = navigation.getParam('url');
 
@@ -12,5 +14,17 @@ function Subscribe({ navigation }) {
     </>
   );
 }
+
+Subscribe.propTypes = {
+  navigation: PropTypes.shape({
+    getParam: PropTypes.func,
+  }),
+};
+
+Subscribe.defaultProps = {
+  navigation: {
+    getParam: '',
+  },
+};
 
 export default Subscribe;
