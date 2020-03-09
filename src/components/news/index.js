@@ -6,43 +6,14 @@ import {
   Dimensions,
 } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
+
+import PropTypes from 'prop-types';
+
 import { argonTheme } from '../../constants';
 
 const { width } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
 const cardWidth = width - theme.SIZES.BASE * 2;
-
-function Articles({
-  navigation,
-  articleTitle,
-  articleImage,
-  articleUrl,
-  articleDate,
-}) {
-  return (
-    <TouchableHighlight
-      style={{ zIndex: 3 }}
-      key={`product-${articleTitle}`}
-      onPress={articleUrl}
-    >
-      <Block center style={styles.productItem}>
-        <Image
-          resizeMode="cover"
-          style={styles.productImage}
-          source={{ uri: articleImage }}
-        />
-        <Block
-          center
-          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 15 }}
-        >
-          <Text center size={16}>
-            {articleTitle}
-          </Text>
-        </Block>
-      </Block>
-    </TouchableHighlight>
-  );
-}
 
 const styles = StyleSheet.create({
   title: {
@@ -100,5 +71,43 @@ const styles = StyleSheet.create({
     paddingTop: theme.SIZES.BASE,
   },
 });
+
+function Articles({ articleTitle, articleImage, articleUrl }) {
+  return (
+    <TouchableHighlight
+      style={{ zIndex: 3 }}
+      key={`product-${articleTitle}`}
+      onPress={articleUrl}
+    >
+      <Block center style={styles.productItem}>
+        <Image
+          resizeMode="cover"
+          style={styles.productImage}
+          source={{ uri: articleImage }}
+        />
+        <Block
+          center
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 15 }}
+        >
+          <Text center size={16}>
+            {articleTitle}
+          </Text>
+        </Block>
+      </Block>
+    </TouchableHighlight>
+  );
+}
+
+Articles.propTypes = {
+  articleTitle: PropTypes.string,
+  articleImage: PropTypes.string,
+  articleUrl: PropTypes.string,
+};
+
+Articles.defaultProps = {
+  articleTitle: 'Título da Notícia',
+  articleImage: 'https://placehold.it/500x500',
+  articleUrl: 'https://metodista.br',
+};
 
 export default Articles;
