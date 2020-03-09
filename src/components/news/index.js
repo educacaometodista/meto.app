@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Image,
-  TouchableWithoutFeedback,
   TouchableHighlight,
   StyleSheet,
   Dimensions,
@@ -18,7 +17,6 @@ function Articles({
   articleTitle,
   articleImage,
   articleUrl,
-  articleDescription,
   articleDate,
 }) {
   return (
@@ -33,25 +31,12 @@ function Articles({
           style={styles.productImage}
           source={{ uri: articleImage }}
         />
-        <Block center style={{ paddingHorizontal: theme.SIZES.BASE }}>
-          <Text
-            center
-            size={14}
-            color={theme.COLORS.MUTED}
-            style={styles.productPrice}
-          >
-            {articleDate}
-          </Text>
+        <Block
+          center
+          style={{ paddingHorizontal: theme.SIZES.BASE, marginTop: 15 }}
+        >
           <Text center size={16}>
             {articleTitle}
-          </Text>
-          <Text
-            center
-            size={12}
-            color={theme.COLORS.MUTED}
-            style={styles.productDescription}
-          >
-            {articleDescription}
           </Text>
         </Block>
       </Block>
