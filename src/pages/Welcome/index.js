@@ -10,7 +10,6 @@ import {
   WelcomeSubtitle,
   ButtonGroup,
   AlunoText,
-  CandidatoButton,
   CandidatoText,
   OrField,
   OrText,
