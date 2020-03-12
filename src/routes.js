@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import { LinearGradient } from 'expo-linear-gradient';
 
 import Welcome from './pages/Welcome';
@@ -10,44 +10,14 @@ import Login from './pages/Aluno/Login';
 import Subscribe from './pages/Subscribe';
 import Home from './pages/Home';
 
-const Routes = createAppContainer(
-  createStackNavigator(
-    {
-      Welcome: {
-        screen: Welcome,
-        navigationOptions: {
-          title: 'Seja bem-vindo!',
-          headerShown: false,
-        },
-      },
-      Candidato: {
-        screen: Candidato,
-        navigationOptions: {
-          title: 'Página do Candidato',
-        },
-      },
-      Login: {
-        screen: Login,
-        navigationOptions: {
-          title: 'Faça o Login',
-        },
-      },
-      Subscribe: {
-        screen: Subscribe,
-        navigationOptions: {
-          title: 'Navegação',
-        },
-      },
-      Home: {
-        screen: Home,
-        navigationOptions: {
-          title: 'Universidade Metodista de São Paulo',
-          // headerShown: false,
-        },
-      },
-    },
-    {
-      defaultNavigationOptions: {
+const Stack = createStackNavigator();
+
+export default function Routes() {
+  return (
+    <Stack.Navigator
+      headerBackTitleVisible={false}
+      headerLayoutPreset="center"
+      screenOptions={{
         headerTintColor: '#FFF',
         headerBackTitleVisible: false,
         headerStyle: {
@@ -62,9 +32,38 @@ const Routes = createAppContainer(
           />
         ),
         headerTitleAlign: 'center',
-      },
-    }
-  )
-);
-
-export default Routes;
+      }}
+    >
+      <Stack.Screen
+        name="Welcome"
+        component={Welcome}
+        options={{ title: 'Seja bem-vindo!', headerShown: false }}
+      />
+      <Stack.Screen
+        name="Candidato"
+        component={Candidato}
+        options={{ title: 'Página do Candidato' }}
+      />
+      {/* <Stack.Screen
+        name="Candidato"
+        component={Candidato}
+        options={{ title: 'Página do Candidato' }}
+      /> */}
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ title: 'Faça o Login' }}
+      />
+      <Stack.Screen
+        name="Subscribe"
+        component={Subscribe}
+        options={{ title: 'Navegação' }}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ title: 'Universidade Metodista de São Paulo' }}
+      />
+    </Stack.Navigator>
+  );
+}
