@@ -6,6 +6,20 @@ import elearning from '../../assets/img/icons/digital-learning/elearning.png';
 import cap from '../../assets/img/icons/digital-learning/graduation-cap.png';
 import library from '../../assets/img/icons/digital-learning/online-library.png';
 
+const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.38,
+    shadowRadius: 16.0,
+
+    elevation: 24,
+  },
+});
+
 export default function Card() {
   return (
     <Wrapper>
@@ -24,17 +38,3 @@ export default function Card() {
     </Wrapper>
   );
 }
-
-const styles = StyleSheet.create({
-  shadow: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 12,
-    },
-    shadowOpacity: 0.38,
-    shadowRadius: 16.0,
-
-    elevation: 24,
-  },
-});
