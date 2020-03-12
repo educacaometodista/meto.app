@@ -5,10 +5,10 @@ import logo from '../../../assets/img/logo.png';
 
 export const HeaderLogo = styled.Image.attrs({
   source: logo,
-  resizeMode: 'cover',
+  resizeMode: 'contain',
 })`
-  max-width: 200px;
-  max-height: 200px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 40px;
 `;
 
