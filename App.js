@@ -1,5 +1,8 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
 import { StatusBar, YellowBox } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import { NavigationContainer } from '@react-navigation/native';
 
@@ -16,15 +19,12 @@ YellowBox.ignoreWarnings([
 
 function App() {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <Routes />
-      {/* <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name="Home" component={Chat} />
-        </Tab.Navigator>
-      </NavigationContainer> */}
-    </>
+    <NavigationContainer>
+      <>
+        <StatusBar barStyle="dark-content" />
+        <Routes />
+      </>
+    </NavigationContainer>
   );
 }
 
