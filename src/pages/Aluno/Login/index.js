@@ -1,5 +1,6 @@
 import React from 'react';
 import { StatusBar, View, Text, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { Button, Input, Checkbox } from 'galio-framework';
 import { Container, HeaderLogo } from './styles';
@@ -62,5 +63,17 @@ function Login({ navigation }) {
     </>
   );
 }
+
+Login.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }),
+};
+
+Login.defaultProps = {
+  navigation: {
+    navigate: 'Home',
+  },
+};
 
 export default Login;
