@@ -5,7 +5,7 @@ import logo from '../../../assets/img/logo.png';
 
 export const HeaderLogo = styled.Image.attrs({
   source: logo,
-  resizeMode: '',
+  resizeMode: 'cover',
 })`
   max-width: 200px;
   max-height: 200px;
