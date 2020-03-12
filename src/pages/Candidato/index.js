@@ -2,13 +2,15 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Button, Input } from 'galio-framework';
+
+import PropTypes from 'prop-types';
+
 import {
   Container,
   Background,
   DocumentContainer,
   DocumentTitle,
   ContinueContainer,
-  ContinueButton,
   ContinueText,
   SubscribeContainer,
   SubscribeButton,
@@ -63,5 +65,17 @@ function Candidato({ navigation }) {
     </>
   );
 }
+
+Candidato.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }),
+};
+
+Candidato.defaultProps = {
+  navigation: {
+    navigate: 'Subscribe',
+  },
+};
 
 export default Candidato;
